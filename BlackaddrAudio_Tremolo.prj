@@ -1,0 +1,130 @@
+{
+  "company": "Blackaddr Audio",
+  "effectName": "Tremolo",
+  "effectVersion": "1.0.0",
+  "effectShortName": "TREM",
+  "effectCategory": "Modulation",
+  "effectDescription": "An easy to use tremolo with mulitple modulation waveforms to choose from.",
+  "numInputs": 1,
+  "numOutputs": 1,
+  "numControls": 5,
+  "effectFilename": "BlackaddrAudio_Tremolo.efx",
+  "libraryName": "BlackaddrAudio_Tremolo",
+  "cppClass": "BlackaddrAudio_Tremolo::Tremolo",
+  "cppInstBase": "_BlackaddrAudio_Tremolo",
+  "constructorParams": "",
+  "controls": [
+    {
+      "name": "Bypass",
+      "shortName": "BYP",
+      "description": "Bypasses the effect when enabled",
+      "config": [
+        0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "iconOn": "gfx/StompDown.png",
+      "iconOff": "gfx/StompUp.png",
+      "position": [
+        311,
+        815
+      ],
+      "scalingRatio": 2.450000047683716,
+      "supressValueLabel": 1
+    },
+    {
+      "name": "Waveform",
+      "shortName": "WAV",
+      "description": "Selects the modulation waveform. Sine, Triangle, Square, Random.",
+      "config": [
+        2,
+        0.0,
+        4.0,
+        0.0,
+        1.0
+      ],
+      "iconEncoder": "gfx/encoder.png",
+      "enums": [
+        "Sine",
+        "Triangle",
+        "Square",
+        "Sawtooth",
+        "Random"
+      ],
+      "position": [
+        311,
+        625
+      ],
+      "scalingRatio": 3.650000095367432
+    },
+    {
+      "name": "Rate",
+      "shortName": "RATE",
+      "description": "Sets the rate of the modulation waveform.",
+      "config": [
+        3,
+        0.0,
+        10.0,
+        2.5,
+        0.1000000014901161
+      ],
+      "iconPot": "gfx/pot.png",
+      "position": [
+        128,
+        160
+      ],
+      "scalingRatio": 2.599999904632568,
+      "supressValueLabel": 1
+    },
+    {
+      "name": "Depth",
+      "shortName": "DEP",
+      "description": "Sets the depth of the modulation effect, from 0% to 100%.",
+      "config": [
+        3,
+        0.0,
+        10.0,
+        7.5,
+        0.1000000014901161
+      ],
+      "iconPot": "gfx/pot.png",
+      "position": [
+        308,
+        160
+      ],
+      "scalingRatio": 2.599999904632568,
+      "supressValueLabel": 1
+    },
+    {
+      "name": "Volume",
+      "shortName": "VOL",
+      "description": "Sets the effect output volume from -40dB to +10dB",
+      "config": [
+        3,
+        0.0,
+        10.0,
+        8.0,
+        0.1000000014901161
+      ],
+      "iconPot": "gfx/pot.png",
+      "position": [
+        493,
+        160
+      ],
+      "scalingRatio": 2.599999904632568,
+      "supressValueLabel": 1
+    }
+  ],
+  "companyLogo": "gfx/BlackaddrAudioLogo.png",
+  "pedalIcon": "gfx/TremoloPedalIcon.png",
+  "basePedal": "gfx/TremoloBasePedal.png",
+  "publicHeaderFiles": [
+    "inc/Tremolo.h"
+  ],
+  "privateSourceFiles": [
+    "src/TremoloBase.cpp",
+    "src/Tremolo.cpp"
+  ]
+}
