@@ -12,6 +12,7 @@
 #include "baCore/AudioEffectWrapper.h"
 
 //!s - START_USER_INCLUDES - put your #includes below this line before the matching END
+#include "baCore/LibBasicFunctions.h"
 //!e - END_USER_INCLUDES
 
 namespace BlackaddrAudio_Tremolo {
@@ -57,6 +58,7 @@ public:
     void volume(float value) override;
 
     //!s - START_USER_PUBLIC_MEMBERS - put your public members below this line before the matching END
+    void setWaveform(baCore::Waveform waveform);
     //!e - END_USER_PUBLIC_MEMBERS
 
 private:
@@ -71,6 +73,10 @@ private:
     audio_block_t* m_basicInputCheck(audio_block_t* inputAudioBlock, unsigned outputChannel);
 
     //!s - START_USER_PRIVATE_MEMBERS - put your private members below this line before the matching END
+    static constexpr float MAX_RATE_HZ = 20.0f;
+
+    baCore::LowFrequencyOscillatorVector<float> m_osc;
+    baCore::Waveform m_waveformType = baCore::Waveform::SINE;
     //!e - END_USER_PRIVATE_MEMBERS
 
 };
