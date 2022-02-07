@@ -26,10 +26,12 @@
         1.0
       ],
       "iconOn": "gfx/StompDown.png",
+      "iconOnHeight": 64,
       "iconOff": "gfx/StompUp.png",
+      "iconOffHeight": 0,
       "position": [
         311,
-        815
+        829
       ],
       "scalingRatio": 2.450000047683716,
       "supressValueLabel": 1
@@ -46,6 +48,7 @@
         1.0
       ],
       "iconEncoder": "gfx/encoder.png",
+      "iconEncoderHeight": 61,
       "enums": [
         "Sine",
         "Triangle",
@@ -55,9 +58,9 @@
       ],
       "position": [
         311,
-        625
+        605
       ],
-      "scalingRatio": 3.650000095367432
+      "scalingRatio": 3.150000095367432
     },
     {
       "name": "Rate",
@@ -71,6 +74,7 @@
         0.1000000014901161
       ],
       "iconPot": "gfx/pot.png",
+      "iconPotHeight": 70,
       "position": [
         128,
         160
@@ -90,6 +94,7 @@
         0.1000000014901161
       ],
       "iconPot": "gfx/pot.png",
+      "iconPotHeight": 70,
       "position": [
         308,
         160
@@ -109,6 +114,7 @@
         0.1000000014901161
       ],
       "iconPot": "gfx/pot.png",
+      "iconPotHeight": 70,
       "position": [
         488,
         160

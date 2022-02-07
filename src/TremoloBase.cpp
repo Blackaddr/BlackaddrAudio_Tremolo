@@ -8,7 +8,7 @@
 #include <cmath>
 #include "baCore/DebugPrint.h"
 #include "baCore/LibBasicFunctions.h"
-#include "BlackaddrAudio_Tremolo/Tremolo.h"
+#include "Tremolo.h"
 
 using namespace baCore;
 
