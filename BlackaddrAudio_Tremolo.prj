@@ -1,7 +1,8 @@
 {
   "company": "Blackaddr Audio",
   "effectName": "Tremolo",
-  "effectVersion": "1.0.0",
+  "effectVersion": "0.2.0",
+  "coreVersion": "0.1.0",
   "effectShortName": "TREM",
   "effectCategory": "Modulation",
   "effectDescription": "An easy to use tremolo with mulitple modulation waveforms to choose from.",
@@ -25,9 +26,9 @@
         0.0,
         1.0
       ],
-      "iconOn": "gfx/StompDown.png",
+      "iconOn": "gfx\\StompUp.png",
       "iconOnHeight": 64,
-      "iconOff": "gfx/StompUp.png",
+      "iconOff": "gfx\\StompDown.png",
       "iconOffHeight": 0,
       "position": [
         311,
@@ -47,7 +48,7 @@
         0.0,
         1.0
       ],
-      "iconEncoder": "gfx/encoder.png",
+      "iconEncoder": "gfx\\encoder.png",
       "iconEncoderHeight": 61,
       "enums": [
         "Sine",
@@ -73,7 +74,7 @@
         2.5,
         0.1000000014901161
       ],
-      "iconPot": "gfx/pot.png",
+      "iconPot": "gfx\\pot.png",
       "iconPotHeight": 70,
       "position": [
         128,
@@ -93,7 +94,7 @@
         7.5,
         0.1000000014901161
       ],
-      "iconPot": "gfx/pot.png",
+      "iconPot": "gfx\\pot.png",
       "iconPotHeight": 70,
       "position": [
         308,
@@ -113,7 +114,7 @@
         8.0,
         0.1000000014901161
       ],
-      "iconPot": "gfx/pot.png",
+      "iconPot": "gfx\\pot.png",
       "iconPotHeight": 70,
       "position": [
         488,
@@ -123,14 +124,14 @@
       "supressValueLabel": 1
     }
   ],
-  "companyLogo": "gfx/BlackaddrAudioLogo.png",
-  "pedalIcon": "gfx/TremoloPedalIcon.png",
-  "basePedal": "gfx/TremoloBasePedal.png",
+  "companyLogo": "gfx\\BlackaddrAudioLogo.png",
+  "pedalIcon": "gfx\\TremoloPedalIcon.png",
+  "basePedal": "gfx\\TremoloBasePedal.png",
   "publicHeaderFiles": [
-    "inc/Tremolo.h"
+    "inc\\Tremolo.h"
   ],
   "privateSourceFiles": [
-    "src/TremoloBase.cpp",
-    "src/Tremolo.cpp"
+    "src\\TremoloBase.cpp",
+    "src\\Tremolo.cpp"
   ]
 }
