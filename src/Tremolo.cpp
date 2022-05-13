@@ -8,7 +8,7 @@
 #include <cmath>
 #include "Tremolo.h"
 
-using namespace baCore;
+using namespace Aviate;
 
 namespace BlackaddrAudio_Tremolo {
 
@@ -63,14 +63,14 @@ void Tremolo::waveform(float value)
     unsigned unsignedValue = static_cast<unsigned>(std::roundf(value * static_cast<float>(4))); // number of supported waveforms minus one
 
     switch (unsignedValue) {
-    case 0 : m_waveformType = baCore::Waveform::SINE; break;
-    case 1 : m_waveformType = baCore::Waveform::TRIANGLE; break;
-    case 2 : m_waveformType = baCore::Waveform::SQUARE; break;
-    case 3 : m_waveformType = baCore::Waveform::SAWTOOTH; break;
-    case 4 : m_waveformType = baCore::Waveform::RANDOM; break;
-    default : m_waveformType = baCore::Waveform::SINE; break;
+    case 0 : m_waveformType = Aviate::Waveform::SINE; break;
+    case 1 : m_waveformType = Aviate::Waveform::TRIANGLE; break;
+    case 2 : m_waveformType = Aviate::Waveform::SQUARE; break;
+    case 3 : m_waveformType = Aviate::Waveform::SAWTOOTH; break;
+    case 4 : m_waveformType = Aviate::Waveform::RANDOM; break;
+    default : m_waveformType = Aviate::Waveform::SINE; break;
     }
-    setWaveform(static_cast<baCore::Waveform>(m_waveformType));
+    setWaveform(static_cast<Aviate::Waveform>(m_waveformType));
 }
 
 void Tremolo::rate(float value)

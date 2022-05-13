@@ -9,10 +9,10 @@
 
 #include <Audio.h>
 #include <arm_math.h>
-#include "baCore/AudioEffectWrapper.h"
+#include "Aviate/AudioEffectWrapper.h"
 
 //!s - START_USER_INCLUDES - put your #includes below this line before the matching END
-#include "baCore/LibBasicFunctions.h"
+#include "Aviate/LibBasicFunctions.h"
 //!e - END_USER_INCLUDES
 
 namespace BlackaddrAudio_Tremolo {
@@ -20,7 +20,7 @@ namespace BlackaddrAudio_Tremolo {
 //!s - START_USER_EFFECT_TYPES - put your effect types below this line before the matching END
 //!e - END_USER_EFFECT_TYPES
 
-class Tremolo : public AudioStream, public baCore::AudioEffectWrapper {
+class Tremolo : public AudioStream, public Aviate::AudioEffectWrapper {
 public:
     static constexpr unsigned NUM_INPUTS  = 1;
     static constexpr unsigned NUM_OUTPUTS = 1;
@@ -58,7 +58,7 @@ public:
     void volume(float value) override;
 
     //!s - START_USER_PUBLIC_MEMBERS - put your public members below this line before the matching END
-    void setWaveform(baCore::Waveform waveform);
+    void setWaveform(Aviate::Waveform waveform);
     //!e - END_USER_PUBLIC_MEMBERS
 
 private:
@@ -75,8 +75,8 @@ private:
     //!s - START_USER_PRIVATE_MEMBERS - put your private members below this line before the matching END
     static constexpr float MAX_RATE_HZ = 20.0f;
 
-    baCore::LowFrequencyOscillatorVector<float> m_osc;
-    baCore::Waveform m_waveformType = baCore::Waveform::SINE;
+    Aviate::LowFrequencyOscillatorVector<float> m_osc;
+    Aviate::Waveform m_waveformType = Aviate::Waveform::SINE;
     //!e - END_USER_PRIVATE_MEMBERS
 
 };
