@@ -1,4 +1,5 @@
 {
+  "efxFileVersion": "1.0.0",
   "company": "Blackaddr Audio",
   "effectName": "Tremolo",
   "effectVersion": "0.2.0",
@@ -124,6 +125,7 @@
       "supressValueLabel": 1
     }
   ],
+  "projectFileVersion": "1.0.0",
   "companyLogo": "gfx/BlackaddrAudioLogo.png",
   "pedalIcon": "gfx/TremoloPedalIcon.png",
   "basePedal": "gfx/TremoloBasePedal.png",
