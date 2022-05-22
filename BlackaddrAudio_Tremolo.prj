@@ -3,7 +3,7 @@
   "company": "Blackaddr Audio",
   "effectName": "Tremolo",
   "effectVersion": "0.2.0",
-  "coreVersion": "0.5.0",
+  "coreVersion": "0.6.0",
   "effectShortName": "TREM",
   "effectCategory": "Modulation",
   "effectDescription": "An easy to use tremolo with mulitple modulation waveforms to choose from.",
@@ -36,7 +36,8 @@
         829
       ],
       "scalingRatio": 2.450000047683716,
-      "supressValueLabel": 1
+      "supressValueLabel": 1,
+      "userData": 1
     },
     {
       "name": "Waveform",
@@ -62,7 +63,8 @@
         311,
         605
       ],
-      "scalingRatio": 3.150000095367432
+      "scalingRatio": 3.150000095367432,
+      "userData": 0
     },
     {
       "name": "Rate",
@@ -82,7 +84,8 @@
         160
       ],
       "scalingRatio": 2.599999904632568,
-      "supressValueLabel": 1
+      "supressValueLabel": 1,
+      "userData": 0
     },
     {
       "name": "Depth",
@@ -102,7 +105,8 @@
         160
       ],
       "scalingRatio": 2.599999904632568,
-      "supressValueLabel": 1
+      "supressValueLabel": 1,
+      "userData": 0
     },
     {
       "name": "Volume",
@@ -122,7 +126,8 @@
         160
       ],
       "scalingRatio": 2.599999904632568,
-      "supressValueLabel": 1
+      "supressValueLabel": 1,
+      "userData": 0
     }
   ],
   "projectFileVersion": "1.0.0",
