@@ -25,7 +25,6 @@ void Tremolo::mapMidiControl(int parameter, int midiCC, int midiChannel)
 
 void Tremolo::setParam(int paramIndex, float paramValue)
 {
-    EFX_PRINT(Serial.printf("Tremolo::setParam(): setting param %d to %0.2f\n\r", paramIndex, paramValue));
     switch(paramIndex) {
     case 0 : bypass( (paramValue - 0.000000) / (1.000000 - 0.000000) ); break;
     case 1 : waveform( (paramValue - 0.000000) / (4.000000 - 0.000000) ); break;
@@ -41,31 +40,26 @@ void Tremolo::processMidi(int channel, int control, int value)
     float val = (float)value / 127.0f;
 
     if ((m_midiConfig[Bypass_e][MIDI_CHANNEL] == channel) && (m_midiConfig[Bypass_e][MIDI_CONTROL] == control)) {
-        EFX_PRINT(Serial.println(String("BlackaddrAudio_Tremolo::Bypass: ") + val + String("%")));
         bypass(val);
         return;
     }
 
     if ((m_midiConfig[Waveform_e][MIDI_CHANNEL] == channel) && (m_midiConfig[Waveform_e][MIDI_CONTROL] == control)) {
-        EFX_PRINT(Serial.println(String("BlackaddrAudio_Tremolo::Waveform: ") + val + String("%")));
         waveform(val);
         return;
     }
 
     if ((m_midiConfig[Rate_e][MIDI_CHANNEL] == channel) && (m_midiConfig[Rate_e][MIDI_CONTROL] == control)) {
-        EFX_PRINT(Serial.println(String("BlackaddrAudio_Tremolo::Rate: ") + val + String("%")));
         rate(val);
         return;
     }
 
     if ((m_midiConfig[Depth_e][MIDI_CHANNEL] == channel) && (m_midiConfig[Depth_e][MIDI_CONTROL] == control)) {
-        EFX_PRINT(Serial.println(String("BlackaddrAudio_Tremolo::Depth: ") + val + String("%")));
         depth(val);
         return;
     }
 
     if ((m_midiConfig[Volume_e][MIDI_CHANNEL] == channel) && (m_midiConfig[Volume_e][MIDI_CONTROL] == control)) {
-        EFX_PRINT(Serial.println(String("BlackaddrAudio_Tremolo::Volume: ") + val + String("%")));
         volume(val);
         return;
     }
