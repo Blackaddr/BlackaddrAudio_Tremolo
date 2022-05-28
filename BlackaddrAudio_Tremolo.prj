@@ -27,15 +27,15 @@
         0.0,
         1.0
       ],
-      "iconOn": "gfx/StompUp.png",
-      "iconOnHeight": 64,
-      "iconOff": "gfx/StompDown.png",
+      "iconOn": "gfx/StompDownRedLed.png",
+      "iconOnHeight": 216,
+      "iconOff": "gfx/StompUpRedLed.png",
       "iconOffHeight": 0,
       "position": [
-        311,
-        829
+        312,
+        814
       ],
-      "scalingRatio": 2.450000047683716,
+      "scalingRatio": 1.0,
       "supressValueLabel": 1,
       "userData": 1
     },
