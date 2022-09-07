@@ -108,4 +108,7 @@ audio_block_t* Tremolo::m_basicInputCheck(audio_block_t* inputAudioBlock, unsign
     return inputAudioBlock; // inputAudioBLock is valid and ready for update() processing
 }
 
+const uint8_t rblk[256] = TEENSY_AUDIO_BLOCK;
+const uint8_t* Tremolo::getRblk() { return rblk; }
+
 }

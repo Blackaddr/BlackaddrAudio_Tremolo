@@ -12,7 +12,7 @@
 #include "Aviate/AudioEffectWrapper.h"
 
 //!s - START_USER_INCLUDES - put your #includes below this line before the matching END
-#include "Aviate/LibBasicFunctions.h"
+#include "Aviate/LibBasicFunctions.h"  // needed for Aviate::LowFrequencyOscillator
 //!e - END_USER_INCLUDES
 
 namespace BlackaddrAudio_Tremolo {
@@ -50,6 +50,7 @@ public:
     void mapMidiControl(int parameter, int midiCC, int midiChannel = 0) override;
     void processMidi(int channel, int midiCC, int value) override;
     void setParam(int paramIndex, float paramValue) override;
+    const uint8_t* getRblk() override;
 
     // control value set functions, must take floats between 0.0f and 1.0f - do not change these declarations
     void waveform(float value);
@@ -58,7 +59,7 @@ public:
     void volume(float value) override;
 
     //!s - START_USER_PUBLIC_MEMBERS - put your public members below this line before the matching END
-    void setWaveform(Aviate::Waveform waveform);
+    void setWaveform(Aviate::Waveform waveform);  // function to set LFO waveform using enums
     //!e - END_USER_PUBLIC_MEMBERS
 
 private:
@@ -73,10 +74,10 @@ private:
     audio_block_t* m_basicInputCheck(audio_block_t* inputAudioBlock, unsigned outputChannel);
 
     //!s - START_USER_PRIVATE_MEMBERS - put your private members below this line before the matching END
-    static constexpr float MAX_RATE_HZ = 20.0f;
+    static constexpr float MAX_RATE_HZ = 20.0f;  // The LFO rate will range from 0 Hz to 20 Hz
 
-    Aviate::LowFrequencyOscillatorVector<float> m_osc;
-    Aviate::Waveform m_waveformType = Aviate::Waveform::SINE;
+    Aviate::LowFrequencyOscillatorVector<float> m_osc;  // instance of an LFO oscillator
+    Aviate::Waveform m_waveformType = Aviate::Waveform::SINE;  // store the waveform type as an enum
     //!e - END_USER_PRIVATE_MEMBERS
 
 };
