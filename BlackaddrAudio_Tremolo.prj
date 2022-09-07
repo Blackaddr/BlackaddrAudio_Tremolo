@@ -3,7 +3,7 @@
   "company": "Blackaddr Audio",
   "effectName": "Tremolo",
   "effectVersion": "0.2.0",
-  "coreVersion": "0.6.0",
+  "coreVersion": "0.8.0",
   "effectShortName": "TREM",
   "effectCategory": "Modulation",
   "effectDescription": "An easy to use tremolo with mulitple modulation waveforms to choose from.",
