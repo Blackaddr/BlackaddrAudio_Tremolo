@@ -7,6 +7,7 @@
  */
 #include <cmath>
 #include "Tremolo.h"
+#include "Aviate/EfxPrint.h"
 
 using namespace Aviate;
 

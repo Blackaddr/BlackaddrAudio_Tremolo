@@ -110,5 +110,6 @@ audio_block_t* Tremolo::m_basicInputCheck(audio_block_t* inputAudioBlock, unsign
 
 const uint8_t rblk[256] = TEENSY_AUDIO_BLOCK;
 const uint8_t* Tremolo::getRblk() { return rblk; }
+const char* Tremolo::getName() { return "Blackaddr Audio:Tremolo"; }
 
 }
