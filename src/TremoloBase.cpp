@@ -35,6 +35,18 @@ void Tremolo::setParam(int paramIndex, float paramValue)
     }
 }
 
+float Tremolo::getUserParamValue(int paramIndex, float normalizedParamValue)
+{
+    switch(paramIndex) {
+    case 0 : return ( ((1.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // bypass
+    case 1 : return ( ((4.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // waveform
+    case 2 : return ( ((10.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // rate
+    case 3 : return ( ((10.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // depth
+    case 4 : return ( ((10.000000 - 0.000000) * normalizedParamValue) + 0.000000 ); // volume
+    default : return 0.0f;
+    }
+}
+
 void Tremolo::processMidi(int channel, int control, int value)
 {
     float val = (float)value / 127.0f;
