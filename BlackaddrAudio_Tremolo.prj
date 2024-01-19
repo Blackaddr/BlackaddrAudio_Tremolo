@@ -1,9 +1,9 @@
 {
-  "efxFileVersion": "1.0.0",
+  "efxFileVersion": "1.3.0",
   "company": "Blackaddr Audio",
   "effectName": "Tremolo",
   "effectVersion": "1.0",
-  "coreVersion": "1.0.0",
+  "coreVersion": "1.3.1",
   "effectShortName": "TREM",
   "effectCategory": "Modulation",
   "effectDescription": "An easy to use tremolo with mulitple modulation waveforms to choose from.",
@@ -15,6 +15,7 @@
   "cppClass": "BlackaddrAudio_Tremolo::Tremolo",
   "cppInstBase": "_BlackaddrAudio_Tremolo",
   "constructorParams": "",
+  "isSingleton": false,
   "controls": [
     {
       "name": "Bypass",
@@ -140,5 +141,11 @@
   "privateSourceFiles": [
     "src/TremoloBase.cpp",
     "src/Tremolo.cpp"
-  ]
+  ],
+  "modules": null,
+  "settings": {
+    "showModules": false,
+    "isSingleton": false,
+    "cppDefines": ""
+  }
 }
