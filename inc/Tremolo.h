@@ -25,6 +25,9 @@ public:
     static constexpr unsigned NUM_INPUTS  = 1;
     static constexpr unsigned NUM_OUTPUTS = 1;
 
+    using AudioBlock    = audio_block_t;
+    using AudioDataType = int16_t;
+
     // List of effect control names
     enum {
         Bypass_e = 0,
@@ -48,7 +51,7 @@ public:
     // Standard EFX interface functions - do not change these declaration
     virtual void update(); // main audio processing loop function
     void mapMidiControl(int parameter, int midiCC, int midiChannel = 0) override;
-    void processMidi(int channel, int midiCC, int value) override;
+    void processMidi(int status, int data1, int data2) override;
     void setParam(int paramIndex, float paramValue) override;
     float getUserParamValue(int paramIndex, float normalizedParamValue);
     const char* getName() override;
@@ -65,10 +68,10 @@ public:
     //!e - END_USER_PUBLIC_MEMBERS
 
 private:
-    audio_block_t *m_inputQueueArray[1]; // required by AudioStream base class, array size is num inputs
+    AudioBlock *m_inputQueueArray[NUM_INPUTS]; // required by AudioStream base class
     int m_midiConfig[NUM_CONTROLS][2]; // stores the midi parameter mapping
 
-    // m_bypass and m_volume are already provided by the base class AudioEffectWrapper
+    // m_bypass and m_volume are already provided by the base class AudioEffectWrapper or AudioEffectFloat
     float m_waveform = 0.0f;
     float m_rate = 0.0f;
     float m_depth = 0.0f;
